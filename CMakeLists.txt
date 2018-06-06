@@ -17,6 +17,30 @@ message(${CATKIN_PACKAGE_SHARE_DESTINATION})
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 install(DIRECTORY launch/
 #   # myfile2
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
   FILES_MATCHING PATTERN "*.launch"
+)
+
+install(DIRECTORY robot_urdf/
+#   # myfile2
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/robot_urdf
+  FILES_MATCHING PATTERN "*.urdf"
+)
+
+install(DIRECTORY robot_srdf/
+#   # myfile2
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/robot_srdf
+  FILES_MATCHING PATTERN "*.srdf"
+)
+
+install(DIRECTORY joint_map/
+#   # myfile2
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/joint_map
+  FILES_MATCHING PATTERN "*.yaml"
+)
+
+install(DIRECTORY stacks/
+#   # myfile2
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/stacks
+  FILES_MATCHING PATTERN "*.yaml"
 )
