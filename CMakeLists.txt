@@ -21,6 +21,11 @@ install(DIRECTORY launch/
   FILES_MATCHING PATTERN "*.launch"
 )
 
+install(DIRECTORY meshes/
+#   # myfile2
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/meshes
+)
+
 install(DIRECTORY robot_urdf/
 #   # myfile2
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/robot_urdf
