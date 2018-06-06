@@ -12,6 +12,8 @@
         <param name="is_model_floating_base" type="bool" value="true"/>
         <param name="model_type" value="RBDL"/>
         <param name="solver" value="$(arg solver)"/>
+        <param name="control_message_type" value="StdCommandMessage"/>
+        <param name="jointstate_message_type" value="StdJointStateMessage"/>
     </node>
 
     <node pkg="cartesian_interface" type="marker_spawner" name="interactive_markers" output="screen"/>
