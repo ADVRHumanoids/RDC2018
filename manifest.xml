@@ -1,0 +1,17 @@
+<package>
+  <description brief="RDC2018">
+
+     RDC2018 demo package
+
+  </description>
+  <author>Enrico Mingo hoffman</author>
+  <license>BSD</license>
+  <version>1.0</version>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend package="roscpp"/>
+  <depend package="rospy"/>
+
+</package>
+
+
