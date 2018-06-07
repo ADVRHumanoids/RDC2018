@@ -17,5 +17,14 @@
     </node>
 
     <node pkg="cartesian_interface" type="marker_spawner" name="interactive_markers" output="screen"/>
+    
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="publish_default_efforts" value="true"/>
+        <param name="publish_default_velocities" value="true"/>
+        <param name="use_gui" value="true"/>
+        <param name="rate" value="10"/>
+        <remap from="joint_states" to="/xbotcore/cartesian/posture/reference"/>
+        <remap from="zeros" to="/xbotcore/cartesian/posture/home"/>
+     </node>
 
 </launch>
