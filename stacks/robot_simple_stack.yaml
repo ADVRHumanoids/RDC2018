@@ -9,14 +9,17 @@ constraints: ["JointLimits", "VelocityLimits"]
 LeftFoot:
     type: "Cartesian"
     distal_link: "l_sole"
+    base_link: "world"
 
 RightFoot:
     type: "Cartesian"
     distal_link: "r_sole"
+    base_link: "world"
 
 TorsoRotZ:
     type: "Cartesian"
     distal_link: "DWYTorso"
+    base_link: "world"
     indices: [5]
     lambda: 0.05
 
@@ -28,16 +31,18 @@ Postural:
     type: "Postural"
     lambda: 0.01
     weight:
-    WaistLat: 100.0
-    LKneePitch: 10.0
-    RKneePitch: 10.0
+        WaistLat: 100.0
+        LKneeSag: 10.0
+        RKneeSag: 10.0
 
 LeftHand:
     type: "Cartesian"
     distal_link: "LWrMot3"
+    base_link: "world"
     lambda: 0.1
 
 RightHand:
     type: "Cartesian"
     distal_link: "RWrMot3"
+    base_link: "world"
     lambda: 0.1
