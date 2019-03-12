@@ -1,9 +1,10 @@
 solver_options:
     regularization: 1e-6
-    back_end: "osqp"
+    back_end: "qpoases"
 
 stack:
-    - ["LeftFoot", "RightFoot", "Com"]
+    - ["LeftFoot", "RightFoot"]
+    - ["Com", "WaistRPY"]
     - ["LeftHand", "RightHand", "TorsoRotZ"]
     - ["Postural"]
     
@@ -40,12 +41,19 @@ Postural:
 
 LeftHand:
     type: "Cartesian"
-    distal_link: "LWrMot3"
+    distal_link: "LSoftHand"
     base_link: "world"
     lambda: 0.1
 
 RightHand:
     type: "Cartesian"
-    distal_link: "RWrMot3"
+    distal_link: "RSoftHand"
     base_link: "world"
     lambda: 0.1
+
+WaistRPY:
+    type: "Cartesian"
+    distal_link: "Waist"
+    base_link: "world"
+    lambda: 0.1
+    indices: [3, 4, 5]
